@@ -26,14 +26,14 @@ docker run --gpus all -it --ipc=host --name <name> -v <host_path>:/<container_pa
 ```
 where `<host_path>` is the path where you cloned this repo and `<container_path>` is any path inside the container you choose.
 
-Setup the environment inside the container. Get inside the container and, *cd* to `<container_path>` and run
+Next, setup the environment inside the container. Get inside the container, *cd* to `<container_path>` and run
 ```
 ./install_requirements.sh
 ```
 if the file is not executable, run *chmod +x install_requirements.sh* first.
 
 ## Get the training data, pretrained model and tokenizer
-Go to https://huggingface.co/airesearch/wangchanberta-base-att-spm-uncased/tree/main. Download `config.json` and `pytorch_model.bin` and put then in `models/wangchanberta-base-att-spm-uncased`. Then download `tokenizer_config.json`, `sentencepiece.bpe.model` and `sentencepiece.bpe.vocab` and put them in `models/tokenizer`. Rename `tokenizer_config.json` to `config.json`. The `models` directory now should look like this
+Go to https://huggingface.co/airesearch/wangchanberta-base-att-spm-uncased/tree/main. Download `config.json` and `pytorch_model.bin` and put them in `models/wangchanberta-base-att-spm-uncased`. Then download `tokenizer_config.json`, `sentencepiece.bpe.model` and `sentencepiece.bpe.vocab` and put them in `models/tokenizer`. Rename `tokenizer_config.json` to `config.json`. The `models` directory now should look like this
 
 ```
 models/
@@ -53,7 +53,7 @@ Inside the container at `<container_path>` from earlier, run
 ```
 python train.py --config_path=config/TranSentCut.yaml
 ```
-The result will be written to `tmp/experiment_results.txt`. Model will be saved to `models/version1`. The training parameters in `config/TranSentCut.yaml` is the best configurations we found. It should give final f1-score (macro) of 0.9296. Space-correct should be 0.9643.
+The result will be written to `tmp/experiment_results.txt`. Model will be saved to `models/version1`. The training parameters in `config/TranSentCut.yaml` is the best configurations we found. It should give best f1-score (macro) of 0.9296. Space-correct should be 0.9643.
 
 # Evaluate the model
 
