@@ -1,0 +1,17 @@
+paths:
+  orchid_path: "data/xmlchid.xml"
+  output_dir: "checkpoints/version1"
+  log_dir: "logs/version1"
+  save_dir: "models/version1"
+  tokenizer_path: "models/tokenizer"
+  pretrain_path: "models/wangchanberta-base-att-spm-uncased"
+model:
+  context_length: 256
+training:
+  num_train_epochs: 20
+  seed: 12345
+  batch_size: 64
+  weight_decay: 9.51207e-5
+  learning_rate: 4.05813e-5
+  balanced: False
+  
