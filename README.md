@@ -66,7 +66,7 @@ where `<eval_path>` is the path to the evaluation data (.txt). On out-of-domain 
 The trained model is also available at https://drive.google.com/drive/folders/1y6ZSnh7N-BjT2stit917RMYnjwuSiJv7?usp=sharing if you just want to evaluate it. Replace `models/version1` in the above command with the path that you saved the model. Please get the tokenizer from https://huggingface.co/airesearch/wangchanberta-base-att-spm-uncased/tree/main. Then rename the tokenizer files and setup the working directory according to the instruction in the training section.
 
 # Docker images
-We provide docker image for inference, please see `sumethy/TranSentCut` on Docker Hub.
+We provide docker image for inference, please see `sumethy/tran_sent_cut` on Docker Hub.
 
 # Reference 
 (abstract only) TranSentCut − Transformer Based Thai Sentence Segmentation https://www.researchgate.net/publication/353996818_TranSentCut_-_Transformer_Based_Thai_Sentence_Segmentation. The full paper is under review.
