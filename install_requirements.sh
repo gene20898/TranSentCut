@@ -6,7 +6,7 @@ pip install gensim==4.0.1
 pip install transformers==4.9.1
 pip install ipywidgets==7.6.3
 pip install pythainlp==2.3.1
-pip install python-crfsuite== 0.9.7
+pip install python-crfsuite==0.9.7
 pip install pytorch-lightning==1.4.0
 pip uninstall -y jupyter-tensorboard nvidia-tensorboard nvidia-tensorboard-plugin-dlprof tensorboard # comment this line if you setup new conda environment, leave it if you use nvidia-pytorch docker image
 pip install tensorboard==2.4.0
