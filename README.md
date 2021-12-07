@@ -1,4 +1,4 @@
-##Group 3 (TranSentCut)
+## Group 3 (TranSentCut)
 We edited train.py so that it can read text from eval.txt and append to the ORCHID dataset
 
 So there will be two seperate files
